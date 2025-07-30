@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"name": "mass-course-maker",
+			"path": "."
+		},
+		{
+			"name": "studocu",
+			"path": "../../../Downloads/studocu"
+		}
+	],
+	"settings": {}
+}
