@@ -90,16 +90,13 @@ class PenseumCourseCreator:
     
     def create_course(self, material_id: str, course_name: str = None) -> Optional[str]:
         """Create a course with the uploaded material"""
-        create_url = f"{self.base_url}/courses/create/v2?course_mode=learn_mode"
+        create_url = f"{self.base_url}/courses/create/v3"
         
         course_data = {
-            "material_id_list": [material_id],
-            "daily_minute": self.daily_minute
+            "material_id_list": [material_id]
         }
         
-        # Add course name if provided
-        if course_name:
-            course_data["name"] = course_name
+        # Note: Course name will be set via update endpoint after creation in v3
         
         try:
             print("⏳ Creating course (this may take up to 2 minutes)...")
